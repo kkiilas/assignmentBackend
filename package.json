@@ -1,0 +1,36 @@
+{
+  "name": "assignmentbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../assignmentfrontend/ && npm run build && cp -r build ../assignmentbackend",
+    "deploy": "git push heroku master",
+    "deploy:full": "git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkiilas/assignmentbackend.git"
+  },
+  "author": "Kadri Kiilas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkiilas/assignmentbackend/issues"
+  },
+  "homepage": "https://github.com/kkiilas/assignmentbackend#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1"
+  }
+}

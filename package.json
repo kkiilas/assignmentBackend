@@ -6,23 +6,15 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "rm -rf build && cd ../assignmentfrontend/ && npm run build && cp -r build ../assignmentbackend",
+    "build:ui": "rm -rf build && cd ../poetrylockparserfrontend/ && npm run build && cp -r build ../poetrylockparserbackend",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kkiilas/assignmentbackend.git"
-  },
   "author": "Kadri Kiilas",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kkiilas/assignmentbackend/issues"
-  },
-  "homepage": "https://github.com/kkiilas/assignmentbackend#readme",
   "devDependencies": {
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",

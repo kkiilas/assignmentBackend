@@ -14,6 +14,10 @@ app.get('/', async (request, response) => {
   response.send('<h1>Hello World!</h1>')
 })
 
+app.get('/1', async (request, response) => {
+  response.send('<h1>Hello World!!!</h1>')
+})
+
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 
